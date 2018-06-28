@@ -1,8 +1,8 @@
 {
-    "name": "jacobcyl/ali-oss-storage",
+    "name": "liyangmsn/ali-oss-storage",
     "description": "aliyun oss filesystem storage for laravel 5+",
     "keywords": ["aliyun", "oss", "laravel", "filesystems", "storage"],
-    "homepage": "http://jacobcyl.github.io/Aliyun-oss-storage/",
+    "homepage": "https://github.com/liyangmsn/Aliyun-oss-storage",
     "license": "MIT",
     "authors": [
         {
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jacobcyl\\AliOSS\\": "src/"
+            "Aliyun\\Oss\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jacobcyl\\AliOSS\\AliOssServiceProvider"
+                "Aliyun\\Oss\\OssServiceProvider"
             ]
         }
     }

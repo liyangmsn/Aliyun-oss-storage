@@ -1,16 +1,16 @@
 <?php
 
-namespace Jacobcyl\AliOSS;
+namespace Aliyun\Oss;
 
-use Jacobcyl\AliOSS\Plugins\PutFile;
-use Jacobcyl\AliOSS\Plugins\PutRemoteFile;
+use Aliyun\Oss\Plugins\PutFile;
+use Aliyun\Oss\Plugins\PutRemoteFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
 use OSS\OssClient;
 
-class AliOssServiceProvider extends ServiceProvider
+class OssServiceProvider extends ServiceProvider
 {
 
     /**
@@ -46,7 +46,7 @@ class AliOssServiceProvider extends ServiceProvider
             if($debug) Log::debug('OSS config:', $config);
 
             $client  = new OssClient($accessId, $accessKey, $epInternal, $isCname);
-            $adapter = new AliOssAdapter($client, $bucket, $endPoint, $ssl, $isCname, $debug, $cdnDomain);
+            $adapter = new OssAdapter($client, $bucket, $endPoint, $ssl, $isCname, $debug, $cdnDomain);
 
             //Log::debug($client);
             $filesystem =  new Filesystem($adapter);

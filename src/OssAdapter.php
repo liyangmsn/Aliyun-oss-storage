@@ -5,19 +5,18 @@
  * Time: 下午 17:07
  */
 
-namespace Jacobcyl\AliOSS;
+namespace Aliyun\Oss;
 
-use Dingo\Api\Contract\Transformer\Adapter;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\Util;
+use League\Flysystem\FileNotFoundException;
 use OSS\Core\OssException;
 use OSS\OssClient;
 use Log;
-use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 
-class AliOssAdapter extends AbstractAdapter
+class OssAdapter extends AbstractAdapter
 {
     /**
      * @var Log debug Mode true|false
